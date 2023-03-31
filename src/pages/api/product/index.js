@@ -1,0 +1,6 @@
+import {products} from '../../../../productData'
+
+export default function handler(req, res) {
+    res.status(200).json(products)
+  }
+  
