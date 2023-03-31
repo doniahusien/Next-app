@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Nav from '../components/nav'
+import Link from 'next/link'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
@@ -12,7 +13,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Home</h1>
+      <div className="flex pt-10 justify-center mt-10">
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="font-bold text-xl">Home</h1>
+          <p className="mt-4 mb-8"> just applyment on Layout </p>
+          <Link rel="stylesheet" href="/products" className='py-3 px-5 bg-gray-700 text-white font-semibold rounded' > Product</Link>
+        </div>
+      </div>
+
+
 
     </>
   )
@@ -21,7 +30,7 @@ export default function Home() {
 Home.getLayout = function pageLayout(page) {
   return (
     <>
-      <Nav/>
+      <Nav />
       {page}
       <footer className="text-center bg-gray-800 text-white py-4 fixed bottom-0 w-full">
         <p>&copy; 2022 Footer</p>
